@@ -2,14 +2,14 @@
 #include <iostream>
 using namespace std;
 
-int value = 10; // Global variable
+int value = 10;
 
 class Demo {
 public:
-	static int value; // Static public member variable
+	static int value;
 };
 
-int Demo::value = 20; // Initialize static member
+int Demo::value = 20;
 
 int main() {
 	int value = 30; 
