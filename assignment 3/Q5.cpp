@@ -2,17 +2,20 @@
 using namespace std;
 class A;
 class B;
-void swapVals(A &a,B &b) 
-{
-	int t=a.val; a.val=b.val; b.val=t;
-}
+void swapVals(A &a, B &b);
 class A
 {
     private:
     	int val;
     public:
-	    A(int x) { val=x; }
-	    void show() { cout<<"A: "<<val<<endl; }
+	    A(int x) 
+        {
+             val=x;
+        }
+	    void show()
+        { 
+            cout<<"A: "<<val<<endl; 
+        }
 	    friend void swapVals(A&,B&);
 };
 class B 
@@ -20,10 +23,22 @@ class B
     private:
         int val;
     public:
-        B(int x) { val=x; }
-        void show() { cout<<"B: "<<val<<endl; }
+        B(int x) 
+        { 
+            val=x; 
+        }
+        void show()
+        {
+            cout<<"B: "<<val<<endl; 
+        }
         friend void swapVals(A&,B&);
 };
+void swapVals(A &a,B &b) 
+{
+	int t=a.val; 
+    a.val=b.val;
+    b.val=t;
+}
 int main() 
 {
 	A a(1); 

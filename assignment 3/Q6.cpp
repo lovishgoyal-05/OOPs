@@ -2,10 +2,9 @@
 using namespace std;
 class X;
 class Y;
-int add(X a,Y b) {
-	return a.val+b.val;
-}
-class X {
+int add(X a, Y b);
+class X
+{
 private:
 	int val;
 public:
@@ -25,6 +24,10 @@ public:
     }
 	friend int add(X,Y);
 };
+int add(X a,Y b)
+ {
+	return a.val+b.val;
+}
 int main() {
 	X x(5); 
     Y y(7);
